@@ -37,6 +37,9 @@ $(document).ready(function () {
 
 });
 
+// set initially the start button onClick as hidden
+$("#start_menu").hide();
+
 //toggle start Menu
 function startmenu() {
 	$('#start_menu').toggle(100);
