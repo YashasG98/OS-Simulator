@@ -6,4 +6,4 @@ git pull upstream master
 git push origin branch_name
 //create the pull request to merge to upstream master
 ```
-While creating a pull request, request a review from either @YashasG98 or @Yash-m-agarwal.
+While creating a pull request, request a review from either [@YashasG98](https://github.com/YashasG98) or [@yash-m-agarwal](https://github.com/yash-m-agarwal).
