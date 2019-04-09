@@ -1,2 +1,60 @@
-<h1>Welcome to File Allocation</h1>
-<h3>Coming Soon</h3>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>File Allocation</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="./hdd.png" rel="icon" type="image/png" />
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="./fileallocation.css">
+    
+
+
+    </head>
+</html>
+<body>
+    <div id="navigation">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#profile">Wiki</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Go to</a>
+                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 42px, 0px); top: 0px; left: 0px; will-change: transform;">
+                <a class="dropdown-item" href="./sequential/sequential.html">Sequential Allocation</a>
+                <a class="dropdown-item" href="./linked/linked.html">Linked Allocation</a>
+                <a class="dropdown-item" href="./indexed/indexed.html">Indexed Allocation</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <h1 style="text-align:center">File Allocation Methods</h1>
+
+    <div style="padding: 60px">
+        <div class="list-group" id="myList" role="tablist">
+            <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">
+                <div onclick="window.location.href='./sequential/sequential.html'">
+                    <li><b style="font-size: 24px">Sequential Allocation</b></li>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">
+                <div onclick="window.location.href='./linked/linked.html'">
+                    <li><b style="font-size: 24px">Linked Allocation</b></li>
+                </div>
+            </a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" role="tab">
+                <div onclick="window.location.href='./indexed/indexed.html'">
+                    <li><b style="font-size: 24px">Indexed Allocation</b></li>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</body>
