@@ -72,13 +72,13 @@ function SCANDisk() {
     arr = [37, 200, 40, 250, 100, 2, 45, 64] //for testing
     var seekTime = 0
     hpos = 0;
-    hpos = 44 //for testing
+    hpos = 260 //for testing
     var firstTrack = 0        //testing
     var lastTrack = 300       //testing
     var i;
     var resultSeq = []
     arr = arr.sort(function (a, b) { return a - b })
-    var direction = 0 //0 for left and 1 for right
+    var direction = 1 //0 for left and 1 for right
     if (direction == 0) {
         if (hpos < arr[0]) {
             seekTime += hpos - firstTrack
@@ -101,6 +101,7 @@ function SCANDisk() {
                 if (arr[i] <= hpos)
                     break;
             }
+            //console.log(i,arr[i])
             for (var j = i; j >= 0; j--) {
                 seekTime += hpos - arr[j]
                 resultSeq.push(arr[j])
@@ -110,7 +111,7 @@ function SCANDisk() {
             if (i != arr.length-1) {
                 seekTime += hpos -firstTrack
                 hpos = firstTrack
-                for (j = i + 1; j < arr.length -1; j++) {
+                for (j = i + 1; j < arr.length; j++) {
                     seekTime += arr[j] - hpos
                     hpos = arr[j]
                     resultSeq.push(arr[j])
@@ -159,4 +160,97 @@ function SCANDisk() {
     }
     console.log("Final seek time : ", seekTime);
     console.log("Final track sequence : ", resultSeq);
+}
+
+function CSANDisk(){
+
+}
+
+function LOOKDisk(){
+    var arr = []
+    arr = [37, 200, 40, 250, 100, 2, 45, 64] //for testing
+    var seekTime = 0
+    hpos = 0;
+    hpos = 251 //for testing
+    var i;
+    var resultSeq = []
+    arr = arr.sort(function (a, b) { return a - b })
+    var direction = 0 //0 for left and 1 for right
+    if (direction == 0) {
+        if (hpos < arr[0]) {
+            for (i = 0; i < arr.length; i++) {
+                seekTime += arr[i] - hpos;
+                resultSeq.push(arr[i])
+                hpos = arr[i]
+            }
+        }
+        else if (hpos > arr[arr.length - 1]) {
+            for (i = arr.length - 1; i >= 0; i--) {
+                seekTime += hpos - arr[i]
+                resultSeq.push(arr[i])
+                hpos = arr[i]
+            }
+        }
+        else {
+            for (i = arr.length - 1; i >= 0; i--) {
+                if (arr[i] <= hpos)
+                    break;
+            }
+            //console.log(i,arr[i])
+            for (var j = i; j >= 0; j--) {
+                seekTime += hpos - arr[j]
+                resultSeq.push(arr[j])
+                hpos = arr[j]
+            }
+
+            if (i != arr.length-1) {
+                for (j = i + 1; j < arr.length; j++) {
+                    seekTime += arr[j] - hpos
+                    hpos = arr[j]
+                    resultSeq.push(arr[j])
+                }
+            }
+        }
+    }
+    else {
+        if (hpos < arr[0]) {
+            for (i = 0; i < arr.length; i++) {
+                seekTime += arr[i] - hpos;
+                resultSeq.push(arr[i])
+                hpos = arr[i]
+            }
+        }
+        else if (hpos > arr[arr.length - 1]) {
+            for (i = arr.length - 1; i >= 0; i--) {
+                seekTime += hpos - arr[i]
+                resultSeq.push(arr[i])
+                hpos = arr[i]
+            }
+        }
+        else {
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] >= hpos)
+                    break;
+            }
+            for (var j = i; j < arr.length; j++) {
+                seekTime += arr[j] - hpos
+                resultSeq.push(arr[j])
+                hpos = arr[j]
+            }
+
+            if (i != 0) {
+                for (j = i - 1; j >= 0; j--) {
+                    seekTime += hpos - arr[j]
+                    hpos = arr[j]
+                    resultSeq.push(arr[j])
+                }
+            }
+        }
+    }
+    console.log("Final seek time : ", seekTime);
+    console.log("Final track sequence : ", resultSeq);
+}
+
+function CLOOKDisk(){
+
 }
