@@ -1,0 +1,72 @@
+BANKER'S ALGORITHM
+
+	This is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation of pre-determined maximum possible amounts of all the available resources, and then make a "safe-state" check to test for possible deadlock conditions for all the remaining activities, brefore deciding whether the allocation must be done or not.
+	
+We need to have information about the following before checking with bankers algorithm:
+
+If 'n' and 'm' are number of processes and the number of types of resources, 
+
+1. Available[m]
+	It's a 1-d integer array of size 'm', containing the number of available resources of each of the 'm' types.
+	
+2. Max[n][m]
+	It's a 2-d integer array of size 'n'*'m' that contains the maximum amount of resources that can be alloted to the processes.
+	If Max[i][j] = k, the i'th process can request a maximum of 'k' instances of the j'th resource. 
+	(Note that the indices start at '0' and end at 'n-1' and 'm-1' respectively.)
+	
+3. Allocation[n][m]
+	It's a 2-d integer array of size 'n'*'m' that contains the amount of resources that are currently alloted to the processes.
+	If Allocation[i][j] = k, the i'th process currently has been allocated 'k' instances of the j'th resource. 
+	(Note that the indices start at '0' and end at 'n-1' and 'm-1' respectively.)
+	
+4. Need[n][m]
+	It's a 2-d integer array of size 'n'*'m' that contains the amount of resources that are currently needed by the processes.
+	If Need[i][j] = k, the i'th process currently needs 'k' instances of the j'th resource for its execution. 
+	(Note that the indices start at '0' and end at 'n-1' and 'm-1' respectively.)
+	At any instance, Need[i][j] = Max[i][j] - Allocation[i][j].
+	
+The Banker's Algorithm consists of Safety Algorithm and and the Resource request algorithm.
+
+-*SAFETY ALGORITHM*-
+
+The algorithm for finding out whether or not a system is in a safe state can be described as follows:
+
+1) Let Work and Finish be arrays of length ‘m’ and ‘n’ respectively.
+   Initialize: Work[i] = Available[i]
+   Finish[i] = false; for i=1, 2, 3, 4…,n
+
+2) Find an i such that both
+	a) Finish[i] = false
+	b) Needi <= Work
+   if no such i exists goto step (4)
+
+3) Work = Work + Allocation[i]
+   Finish[i] = true
+   Add process no.'i' to safe sequence queue. 
+   goto step (2)
+
+4) if Finish [i] = true for all i
+   then the system is in a safe state
+   print safe sequence
+   
+-*RESOURCE - REQUEST ALGORITHM*-
+
+Let Requestofi[m] be the request array for i'th process. Requesti[j] = k means i'th process wants 'k' instances of the j'th resource type. When a request for resources is made by the i'th process, the following actions are taken:
+
+1) If Requesti[j] <= Need[i][j] for all j<m,
+   Goto step (2) ; otherwise, raise an error condition, since the process has exceeded its maximum claim.
+
+2) If Requesti[j] <= Available[i][j] for all j<m,
+   Goto step (3); otherwise, Process must wait, since the resources are not available.
+
+3) Have the system pretend to have allocated the requested resources to process Pi by modifying the state as follows:
+   for all j<m
+   {  
+     Available[j] = Available[j] – Requesti[j]
+     Allocation[i][j] = Allocation[i][j] + Requesti[j]
+     Need[i][j] = Need[i][j] – Requesti[j] 
+   }
+   
+-*LIMITATIONS*-
+
+	The Banker's algorithm has some limitations when implemented. Specifically, it needs to know how much of each resource a process could possibly request. In most systems, this information is unavailable, making it impossible to implement the Banker's algorithm. Also, it is unrealistic to assume that the number of processes is static since in most systems the number of processes varies dynamically. Moreover, the requirement that a process will eventually release all its resources (when the process terminates) is sufficient for the correctness of the algorithm, however it is not sufficient for a practical system. Waiting for hours (or even days) for resources to be released is usually not acceptable.
