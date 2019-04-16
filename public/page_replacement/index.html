@@ -23,8 +23,8 @@
 
 
 <nav>
-    <div class="nav-wrapper teal">
-        <a href="#!" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+    <div class="nav-wrapper teal darken-4">
+        <a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="../cpu_scheduling">Process Scheduling</a></li>
             <li><a href="../disk_scheduling">Disk Scheduling</a></li>
@@ -40,11 +40,11 @@
       <div class="container" style="margin: 0;">
 
         <div class="header-section">
-          <div id="particles-js">
+          <div id="particles-js" class="teal">
           </div>
           <div class="header-font center-align">
 
-            <span class="topic">Page Replacement</span>
+            <span class="topic" style="margin-top: 50px; display: inline-block">Page Replacement</span>
           </div>
         </div>
       </div>
@@ -70,12 +70,12 @@
 
 
         </div>
-        <a style="background-color:black;font-size: 15px;" id="continue_button" class="waves-effect waves-light btn-large">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+        <a style="background-color:black;font-size: 15px;" id="continue_button" class="waves-effect waves-light btn-large teal darken-4">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
 
       </form>
 
       <div id="input" class="col s9" style="font-size:18px;display: none;">
-        Enter reference string
+        Enter Page Requests
         <div id="input_boxes">
 
         </div>
@@ -84,7 +84,7 @@
         <br>
         <br>
         <br>
-        <a style="background-color:black;font-size: 15px;" id="action" class="waves-effect waves-light btn-large">Simulate</a>
+        <a style="background-color:black;font-size: 15px;" id="action" class="waves-effect waves-light btn-large teal darken-4">Simulate</a>
 
       </div>
       <div class="row center">
@@ -93,7 +93,7 @@
           <h3>LRU</h3>
           <span style="font-size: 20px" id="lru_hit">Hit Percentage:</span>
           <br>
-          <table id="lru_table" class='table table-bordered centered'>
+          <table id="lru_table" class='table table-bordered centered highlight striped'>
             <tr>
             </tr>
           </table>
@@ -140,8 +140,8 @@
       </div>
 </div>
 <div class="fixed-action-btn">
-    <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
-    </a>
+    <!--<a class="btn-floating btn-large tooltipped teal darken-4" data-position="left" data-tooltip="Home" href="../">
+    </a>-->
     <!-- <ul>
       <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="Contiguous" href="./contiguous.html"><i class="material-icons" >C</i></a></li>
       <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="Indexed" href="./indexed.html"><i class="material-icons">I</i></a></li>

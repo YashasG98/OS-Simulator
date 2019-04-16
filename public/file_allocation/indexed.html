@@ -19,13 +19,28 @@
 	<link rel="stylesheet" href="/stylesheets/common.css">
 </head>
 <body onload="put_blocks()">
+
+<nav>
+	<div class="nav-wrapper teal darken-4">
+		<a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="../cpu_scheduling">Process Scheduling</a></li>
+			<li><a href="../page_replacement">Page Replacement</a></li>
+			<li><a href="../bankers">Banker's Algorithm</a></li>
+			<li><a href="../process_synchronization">Process Synchronization</a></li>
+			<li><a href="../memory_management">Memory Management</a></li>
+			<li><a href="../disk_scheduling">Disk Management</a></li>
+		</ul>
+	</div>
+</nav>
+
 	<header>
 			<div class="container" style="margin: 0;">
 				<div class="header-section">
-				<div id="particles-js">
+				<div id="particles-js" class="teal">
 				</div>
-				<div class="header-font center-align">   
-					<span class="topic">Indexed File Allocation</span>
+				<div class="header-font center-align">
+					<span class="topic" style="margin-top: 50px; display: inline-block">Indexed File Allocation</span>
 				</div>
 			</div>
 		</div>
@@ -51,7 +66,7 @@
 				</div>
 				<div class="row">
 					<div class="col s4">
-						<a class="btn btn-large" onclick="add_file()"><i class="material-icons right">add</i>Add</a>
+						<a class="btn btn-large teal darken-4" onclick="add_file()"><i class="material-icons right">add</i>Add</a>
 					</div>
 				</div>
 				<br>

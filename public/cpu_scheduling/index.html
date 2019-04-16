@@ -25,13 +25,27 @@
 </head>
 <body>
 
+<nav>
+    <div class="nav-wrapper teal darken-4">
+        <a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="../page_replacement">Process Scheduling</a></li>
+            <li><a href="../disk_scheduling">Disk Scheduling</a></li>
+            <li><a href="../bankers">Banker's Algorithm</a></li>
+            <li><a href="../process_synchronization">Process Synchronization</a></li>
+            <li><a href="../memory_management">Memory Management</a></li>
+            <li><a href="../file_allocation">File Management</a></li>
+        </ul>
+    </div>
+</nav>
+
 <header>
     <div class="container" style="margin: 0;">
         <div class="header-section">
-        <div id="particles-js">
+        <div id="particles-js" class="teal">
         </div>
-        <div class="header-font center-align">   
-            <span class="topic">CPU Scheduling</span>
+        <div class="header-font center-align">
+            <span class="topic" style="margin-top: 50px; display: inline-block">Process Scheduling</span>
         </div>
         </div>
     </div>
@@ -49,9 +63,9 @@
             <div class="row">
                 <div class="col s2"><b>Processes</b></div>
                 <div class="col s2">
-                    <a  class="btn btn-small btn-xs col s2" href="javascript:remove_process()">-</a>
+                    <a  class="btn btn-small btn-xs col s2 teal darken-4" href="javascript:remove_process()">-</a>
                     <div class="col" id="n_processes">1</div>
-                    <a class="btn btn-small btn-xs col s2" href="javascript:add_process()">+</a>
+                    <a class="btn btn-small btn-xs col s2 teal darken-4" href="javascript:add_process()">+</a>
               </div>
             </div>
             <div class="row" id="processes">
@@ -68,14 +82,14 @@
                     <label for="head_pos">Priority</label>
                 </div>
             </div>
-            <a class="btn btn-primary" onclick="submit()">Submit</a>
+            <a class="btn btn-primary teal darken-4" onclick="submit()">Submit</a>
        </div>
     </div> 
 </div>
 <div class="fixed-action-btn">
-        <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+        <!--<a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
           <i class="large material-icons">folder</i>
-        </a>
+        </a>-->
         <!-- <ul>
           <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="NRZ-L" href="../nrz-l"><i class="material-icons" >L</i></a></li>
           <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="NRZ-I" href="../nrz-i"><i class="material-icons">I</i></a></li>

@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/javascripts/memory_management/memory_management.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -109,15 +109,28 @@
 </head>
 <body>
 
+<nav>
+    <div class="nav-wrapper teal darken-4">
+        <a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+        <ul class="right hide-on-med-and-down" style="margin-top: 18px;">
+            <li><a href="../cpu_scheduling">Process Scheduling</a></li>
+            <li><a href="../page_replacement">Page Replacement</a></li>
+            <li><a href="../bankers">Banker's Algorithm</a></li>
+            <li><a href="../process_synchronization">Process Synchronization</a></li>
+            <li><a href="../disk_scheduling">Disk Scheduling</a></li>
+            <li><a href="../file_allocation">File Management</a></li>
+        </ul>
+    </div>
+</nav>
 
   <header>
       <div class="container" style="margin: 0;">
         <div class="header-section">
-          <div id="particles-js">
+          <div id="particles-js" class="teal">
           </div>
           <div class="header-font center-align">
-            
-            <span class="topic">Memory Management (MFT)</span>
+
+              <span class="topic" style="margin-top: 80px; display: inline-block">Memory Management (MFT)</span>
           </div>
         </div>
       </div>
@@ -167,7 +180,7 @@
         </br>
         <div class = "row center">
 
-        <a style="background-color:black;font-size: 15px;"onclick="javascript:submit1()" id="first_text_submit" class="waves-effect waves-light btn-large">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+        <a style="background-color:black;font-size: 15px;"onclick="javascript:submit1()" id="first_text_submit" class="waves-effect waves-light btn-large teal darken-4">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
         </div>
     </div>
 
@@ -194,7 +207,7 @@
 		</div>
         <div class = "row center">
 
-        <a style="background-color:black;font-size: 15px;" onclick="javascript:submit2()" id="second_text_submit" class="waves-effect waves-light btn-large">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+        <a style="background-color:black;font-size: 15px;" onclick="javascript:submit2()" id="second_text_submit" class="waves-effect waves-light btn-large teal darken-4">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
         </div>
 	</div>
     <!-- Memory required for each process -->
@@ -209,7 +222,7 @@
 
         <div class = "row center">
             
-        <a style="background-color:black;font-size: 15px;" onclick="javascript:submit3()" id="third_text_submit" id="b4" class="waves-effect waves-light btn-large">Simulate</a>
+        <a style="background-color:black;font-size: 15px;" onclick="javascript:submit3()" id="third_text_submit" id="b4" class="waves-effect waves-light btn-large teal darken-4">Simulate</a>
         </div>
     </div>
 
@@ -242,9 +255,9 @@
 	    </div>
     </div>
     <div class="fixed-action-btn">
-            <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+            <!--<a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
               <i class="large material-icons">folder</i>
-            </a>
+            </a>-->
             <!-- <ul>
               <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="Contiguous" href="./contiguous.html"><i class="material-icons" >C</i></a></li>
               <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="Indexed" href="./indexed.html"><i class="material-icons">I</i></a></li>

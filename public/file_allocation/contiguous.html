@@ -26,13 +26,28 @@
 <!--<div id="side_top_navbar">-->
 
 <!--</div>-->
+
+<nav>
+    <div class="nav-wrapper teal darken-4">
+        <a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="../cpu_scheduling">Process Scheduling</a></li>
+            <li><a href="../page_replacement">Page Replacement</a></li>
+            <li><a href="../bankers">Banker's Algorithm</a></li>
+            <li><a href="../process_synchronization">Process Synchronization</a></li>
+            <li><a href="../memory_management">Memory Management</a></li>
+            <li><a href="../disk_scheduling">Disk Management</a></li>
+        </ul>
+    </div>
+</nav>
+
 <header>
   <div class="container" style="margin: 0;">
       <div class="header-section">
-      <div id="particles-js">
+      <div id="particles-js" class="teal">
       </div>
-      <div class="header-font center-align">   
-          <span class="topic">Contiguous File Allocation</span>
+      <div class="header-font center-align">
+          <span class="topic" style="margin-top: 50px; display: inline-block">Contiguous File Allocation</span>
       </div>
       </div>
   </div>
@@ -57,14 +72,14 @@
 
         </div>
         <div>
-          <a class="btn btn-large" onclick="add_file()"><i class="material-icons right">add</i>Add</a>
+          <a class="btn btn-large teal darken-4" onclick="add_file()"><i class="material-icons right">add</i>Add</a>
         </div>
       
       </div>
       <div class="fixed-action-btn">
-          <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+          <!--<a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
             <i class="large material-icons">folder</i>
-          </a>
+          </a>-->
           <ul>
             <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="Contiguous" href="./contiguous.html"><i class="material-icons" >C</i></a></li>
             <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="Indexed" href="./indexed.html"><i class="material-icons">I</i></a></li>
