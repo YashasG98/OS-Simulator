@@ -8,15 +8,18 @@
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="./hdd.png" rel="icon" type="image/png" />
+        <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
         <link rel="stylesheet" href="./bootstrap.min.css">
         <link rel="stylesheet" href="./fileallocation.css">
+        
+
     
 
 
     </head>
 </html>
 <body>
-    <div id="navigation">
+    <!-- <div id="navigation">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a href="../index.html">Home</a>
@@ -32,8 +35,10 @@
                 <a class="dropdown-item" href="./indexed/indexed.html">Indexed Allocation</a>
                 </div>
             </li>
+            <h1 style="text-align:center">File Allocation Methods</h1>
         </ul>
-    </div>
+        
+    </div> -->
     
     <h1 style="text-align:center">File Allocation Methods</h1>
 
@@ -57,4 +62,54 @@
         </div>
 
     </div>
+
+    <div class="start-menu" id="start_menu">
+	    	<nav class="navbar navbar-default fixed-bottom" role="navigation">
+		        <div class="side-menu-container">
+		          <ul class="nav navbar-nav">
+		            <li>
+		            	<a class="nav-item nav-link active" href="#socket"><span class="glyphicon glyphicon-comment"></span>System Calls</a>
+		            </li>
+		            <li>
+		            	<a href="../ProcessScheduling/index.html" class="nav-item nav-link"><span class="glyphicon glyphicon-tasks"></span>Process Scheduling</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../ProcessSynchronization/index.html"><span class="glyphicon glyphicon-refresh"></span>Process Synchronization</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../Bankers/index.html"><span class="glyphicon glyphicon-equalizer"></span>Bankers Algorithm</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../PageReplacement/index.html"><span class="glyphicon glyphicon-duplicate"></span>Page Replacement</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../MVT/index.html"><span class="glyphicon glyphicon-hdd"></span>Memory Management (MVT)</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../MFT/index.html"><span class="glyphicon glyphicon-hdd"></span>Memory Management (MFT)</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../DiskScheduling/index.html"><span class="glyphicon glyphicon-cd"></span>Disk Scheduling</a>
+		            </li>
+		            <li>
+		            	<a class="nav-item nav-link" href="../FileAllocation/index.html"><span class="glyphicon glyphicon-file"></span>File Allocation</a>
+		            </li> 
+		          </ul>
+		        </div>  
+	      	</nav>
+	    </div>
+
+		<div class="start-bottom">
+			<button class="start" data-toogle="tooltip" title="Search your Computer" onclick="startmenu()">
+				<img src="../images/thumb_Start.png" width="40px" height="40px" alt="start" />
+			</button>
+			<div class="date-time">
+				<span class="time"></span>
+				<span class="am-pm"></span><br>
+				<span class="date"></span>
+			</div>
+        </div>
+        
+        <script src="../javascript/index.js" type="text/javascript"></script>
+
 </body>
