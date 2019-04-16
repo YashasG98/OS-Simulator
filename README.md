@@ -1,6 +1,4 @@
 # OS-Simulator
-[![HitCount](http://hits.dwyl.com/mishal23/os-simulator.svg)](http://hits.dwyl.com/mishal23/os-simulator)
-
 User Interface simulating the major concepts of Operating Systems.
 
 ### Simulations Done
@@ -37,20 +35,8 @@ User Interface simulating the major concepts of Operating Systems.
 
 ### How to Run?
 - Open git bash
-- git clone https://github.com/mishal23/os-simulator.git
+- git clone https://github.com/YashasG98/OS-Simulator.git
 - cd os-simulator
 - `npm install` (To install all the dependency packages)
 - `npm start`
 - Go to Browser and type http://localhost:3000
-
-### Contributors
-- M. R Ashrit ([@Ashrit26](https://github.com/Ashrit26))
-- Bobby Patil ([@bobbypt05](https://github.com/bobbypt05))
-- Himanshu Nagdive ([@himanshu1708](https://github.com/himanshu1708))
-- Mahir Jain ([@mahirjain25](https://github.com/mahirjain25))
-- Mehnaz Yunus ([@mehnazyunus](https://github.com/mehnazyunus))
-- Mishal Shah ([@mishal23](https://github.com/mishal23))
-- Mohit Bhasi ([@m0bi5](https://github.com/m0bi5))
-- Namrata Ladda ([@Namrata7199](https://github.com/Namrata7199))
-- Nihal Haneef ([@Nihalh55](https://github.com/Nihalh55))
-- Palak Singhal ([@smarty1palak](https://github.com/smarty1palak))
