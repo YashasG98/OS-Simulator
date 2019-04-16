@@ -63,6 +63,12 @@ $(document).ready(function() {
 function startColumn2() {
      var htmlText =
     `
+    <button type="submit" class="btn btn-primary" id="add-pro-btn">Add process</button>
+    <button type="submit" class="btn btn-primary" id="rem-pro-btn">Remove process</button>
+    `;
+    $("#add-rem-pro-btns").html(htmlText);
+     var htmlText =
+    `
     <canvas id="myCanvas" width="170" height="520" style="border:1px solid #d3d3d3;">
                 Your browser does not support the HTML5 canvas tag.</canvas>
     `;
@@ -80,6 +86,15 @@ function startColumn2() {
 }
 
 function addProcessSize() {
+    var htmlText =
+    `
+    <div class="form-group">
+        <label>Size of process to be added: </label>
+        <input type="text" class="form-control" id="add-pro-size" placeholder="Enter size of process to be added">
+    </div>
+    <button type="submit" class="btn btn-primary" id="add-btn">Add</button>
+    `;
+    $("#add-rem-pro").html(htmlText);
     $(document).ready(function() {
         $("#add-btn").click(function(){
             var pro_size = Number($("#add-pro-size").val());
@@ -211,6 +226,15 @@ function drawPart() {
 }
 
 function remProcessId() {
+     var htmlText =
+    `
+    <div class="form-group">
+        <label>Id of process to be removed: </label>
+        <input type="text" class="form-control" id="rem-pro-id" placeholder="Enter id of process to be removed">
+    </div>
+    <button type="submit" class="btn btn-primary" id="rem-btn">Remove</button>
+    `;
+    $("#add-rem-pro").html(htmlText);
     $(document).ready(function() {
         $("#rem-btn").click(function(){
             var id_pro = Number($("#rem-pro-id").val());
