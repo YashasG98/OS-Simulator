@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+div {
+    display: block;
+}
+
+button {
+    background-color: #000000;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+}
+
+.icon-name {
+    color: aliceblue;
+    font-size: 16px;
+}
+
+.start-bottom {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #000000;
+    border-top: 2px solid gray;
+    z-index: 5;
+}
+
+.date-time {
+    float: right;
+    color: #FFF;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.start {
+    float: left;
+}
+
+.start-menu {
+    position: fixed;
+    bottom: 3%;
+    width: 360px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #e7e7e7;
+}
+
+.start-menu .navbar {
+    border: none;
+}
+
+.start-menu .navbar-header {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+.start-menu .navbar-nav .active a {
+    background-color: transparent;
+    margin-right: -1px;
+    border-right: 5px solid #e7e7e7;
+}
+.start-menu .navbar-nav li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 18px;
+}
+.start-menu .navbar-nav li a {
+    padding: 15px;
+}
+.start-menu .navbar-nav li a .glyphicon {
+    padding-right: 16px;
+}
+
+.start-menu .brand-name-wrapper {
+    min-height: 50px;
+}
+.start-menu .brand-name-wrapper .navbar-brand {
+    display: block;
+}

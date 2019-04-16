@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CPU Scheduling</title>
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="text/javascript"></script>
+    <link href="/stylesheets/team.css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="/javascripts/page_replacement/page_replacement.js"></script>
+</head>
+<body>
+
+  <header>
+      <div class="container" style="margin: 0;">
+        <div class="header-section">
+          <div id="particles-js">
+          </div>
+          <div class="header-font center-align">
+            
+            <span class="topic">Page Replacement</span>
+          </div>
+        </div>
+      </div>
+  </header>
+
+<div class="row">
+    
+    <br><br><br>
+     <form id="1" class="col s3">
+        <div id="c1" >
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="number_of_frames" type="text" >
+            <label for="number_of_frames">Number of Frames</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input  id="number_of_requests" type="text" >
+            <label for="number_of_requests">Number of Requests</label>
+          </div>
+        </div>
+
+
+        </div>
+        <a style="background-color:black;font-size: 15px;" id="continue_button" class="waves-effect waves-light btn-large">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+
+      </form>
+
+      <div id="input" class="col s9" style="font-size:18px;display: none;">
+        Enter reference string
+        <div id="input_boxes">
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a style="background-color:black;font-size: 15px;" id="action" class="waves-effect waves-light btn-large">Simulate</a>
+
+      </div>
+      <div class="row center">
+      <div class="col s8 offset-s2" style="display: none;" id="result">
+        <div id="lru">
+          <h3>LRU</h3>
+          <span style="font-size: 20px" id="lru_hit">Hit Percentage:</span>
+          <br>
+          <table id="lru_table" class='table table-bordered centered'>
+            <tr>
+            </tr>
+          </table>
+          <br>
+        </div>
+        <div id="fifo">
+          <h3>FIFO</h3>
+          <span style="font-size: 20px" id="fifo_hit">Hit Percentage:</span>
+          <br>
+          <table id="fifo_table" class='table table-bordered centered'>
+            <tr>
+            </tr>
+          </table>
+
+          <br>
+        </div>
+
+        <div class="center" id="optimal">
+          <h3>OPTIMAL</h3>
+          <span style="font-size: 20px" id="optimal_hit">Hit Percentage:</span>
+          <br>
+          <table id="optimal_table" class='table table-bordered centered'>
+            <tr>
+            </tr>
+          </table>
+
+          <br>
+        </div>
+
+
+        <div class="center" id="second_chance">
+          <h3>SECOND CHANCE</h3>
+          <span style="font-size: 20px" id="second_chance_hit">Hit Percentage:</span>
+          <br>
+          <table id="second_chance_table" class='table table-bordered centered'>
+            <tr>
+            </tr>
+          </table>
+
+          <br>
+        </div>
+
+</div>
+      </div>
+</div>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+      <i class="large material-icons">folder</i>
+    </a>
+    <!-- <ul>
+      <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="Contiguous" href="./contiguous.html"><i class="material-icons" >C</i></a></li>
+      <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="Indexed" href="./indexed.html"><i class="material-icons">I</i></a></li>
+      <li><a class="btn-floating tooltipped green" data-position="left" data-tooltip="Linked" href="./linked.html"><i class="material-icons">L</i></a></li>
+      <li><a class="btn-floating tooltipped blue" data-position="left" data-tooltip="Differential Manchester" href="../differential-manchester"><i class="material-icons">D</i></a></li>
+      <li><a class="btn-floating tooltipped black" data-position="left" data-tooltip="Polar Encodings" href="../polar"><i class="material-icons">P</i></a></li>
+    </ul>
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red" data-position="bottom" data-tooltip="Home" href="../">
+        <i class="large material-icons">folder</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating tooltipped green" data-position="top" data-tooltip="Bipolar" href="../bipolar"><i class="material-icons">B</i></a></li>
+        <li><a class="btn-floating tooltipped blue" data-position="top" data-tooltip="Pseudoternary" href="../pseudoternary"><i class="material-icons">P</i></a></li>
+        <li><a class="btn-floating tooltipped black" data-position="top" data-tooltip="AMI" href="../ami"><i class="material-icons">A</i></a></li>
+      </ul>
+    </div> -->
+  </div>
+
+</body>
+</html>

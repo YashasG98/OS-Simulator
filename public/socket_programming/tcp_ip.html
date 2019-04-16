@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket Programming</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.1.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js" type="text/javascript"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascripts/socket_programming/tcp_ip.js"></script>
+    <link rel="stylesheet" href="/stylesheets/socket_programming/tcp_ip.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/common.css">
+</head>
+<body>
+    <header>
+        <div class="container" style="margin: 0;">
+          <div class="header-section">
+            <div id="particles-js">
+            </div>
+            <div class="header-font center-align">
+              
+              <span class="topic">TCP-IP Socket Programming</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<div style="margin-left: 22vh; margin-top: 10vh;">
+    <button class="waves-effect waves-light btn-large" id="socket"><span style="font-weight: bold">Socket</span></button>
+    <button class="waves-effect waves-light btn-large" id="bind"><span style="font-weight: bold">Bind</span></button>
+    <button class="waves-effect waves-light btn-large" id="listen"><span style="font-weight: bold">Listen</span></button>
+    <button class="waves-effect waves-light btn-large" id="connect"><span style="font-weight: bold">Connect</span></button>
+    <button class="waves-effect waves-light btn-large" id="accept"><span style="font-weight: bold">Accept</span></button>
+    <button class="waves-effect waves-light btn-large" id="send"><span style="font-weight: bold">Send</span></button>
+    <button class="waves-effect waves-light btn-large" id="receive"><span style="font-weight: bold">Receive</span></button>
+    <button class="waves-effect waves-light btn-large" id="close"><span style="font-weight: bold">Close</span></button>
+</div>
+<div class="wifi-symbol">
+<i class="fa fa-wifi wifi1" style="font-size: 100px; transform: rotate(90deg)"></i>
+<i class="fa fa-wifi wifi2" style="font-size: 100px; transform: rotate(-90deg)"></i>
+</div>
+<i class="fa fa-telegram" style="font-size: 35px;"></i>
+
+<div id="laptop1">
+  <div class="macbook">
+    <div class="macbook-lid">
+      <div class="macbook-screen">
+        <div class="macbook-content">
+          <p id="server" style="text-align: center; font-size: 22px;">Server</p> 
+          <span id="ip" style="font-size: 22px;"></span>
+          <span id="server-message" style="font-size: 22px;"></span>
+        </div>
+      </div>
+    </div>
+    <div class="macbook-base"></div>
+  </div>
+</div>
+
+<div id="laptop2">
+
+  <div class="macbook1">
+    <div class="macbook1-lid">
+      <div class="macbook1-screen">
+        <div class="macbook1-content">
+          <p id="client" style="text-align: center; font-size: 22px;">Client</p> 
+          <span id="client-message" style="font-size: 22px;"></span>
+        </div>
+      </div>
+    </div>
+    <div class="macbook1-base"></div>
+  </div>
+
+</div>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+      <i class="large material-icons">folder</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="TCP-IP" href="./tcp_ip.html"><i class="material-icons" >T</i></a></li>
+      <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="UDP" href="./udp.html"><i class="material-icons">U</i></a></li>
+       <li><a class="btn-floating tooltipped green" data-position="left" data-tooltip="Chat" href="./chat.html"><i class="material-icons">C</i></a></li>
+      <!-- <li><a class="btn-floating tooltipped blue" data-position="left" data-tooltip="Differential Manchester" href="../differential-manchester"><i class="material-icons">D</i></a></li> -->
+      <!-- <li><a class="btn-floating tooltipped black" data-position="left" data-tooltip="Polar Encodings" href="../polar"><i class="material-icons">P</i></a></li> --> -->
+    </ul>
+    <!-- <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red" data-position="bottom" data-tooltip="Home" href="../">
+        <i class="large material-icons">folder</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating tooltipped green" data-position="top" data-tooltip="Bipolar" href="../bipolar"><i class="material-icons">B</i></a></li>
+        <li><a class="btn-floating tooltipped blue" data-position="top" data-tooltip="Pseudoternary" href="../pseudoternary"><i class="material-icons">P</i></a></li>
+        <li><a class="btn-floating tooltipped black" data-position="top" data-tooltip="AMI" href="../ami"><i class="material-icons">A</i></a></li>
+      </ul>
+    </div> -->
+  </div>
+
+</body>
+</html>

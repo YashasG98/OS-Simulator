@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Ubuntu-L";
+    src: url("../fonts/Ubuntu-L.ttf");
+}
+
+body {
+	font-family: 'Ubuntu-L', Arial;
+	margin: 0;
+	padding: 0;
+	overflow: hidden; /* not to allow the window to scroll */
+	background-image: url('/images/windows10_wall.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
