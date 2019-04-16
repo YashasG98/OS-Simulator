@@ -149,7 +149,8 @@ function AddFile(file_id){
         {
             var prev = freeSlot();
             blocks[prev].fid = id;
-    
+            AddToFileList(name,id,size,breq,0);
+            print("AddFile: File Id: "+id+" Added in disk","output-log");
             breq--;
             while(breq--)
             {
@@ -161,8 +162,6 @@ function AddFile(file_id){
     
             blocks[prev].next = -1;
 
-            AddToFileList(name,id,size,breq,0);
-            print("AddFile: File Id: "+id+" Added in disk","output-log");
         }
     }
     

@@ -136,7 +136,7 @@ function AddFile(file_id){
         return;
     }
     else{
-        var breq=ceilDivision(size, blockCapacity);
+        var breq=ceilDivision(size, blockCapacity)+1;
         if(freeMemory() < breq){
             file = {id,breq};
             queue[++rear] = file;
@@ -154,6 +154,7 @@ function AddFile(file_id){
             AddToFileList(name,id,size,breq,0);
             print("AddFile: File Id: "+id+" Added in disk","output-log");
 
+            breq--;
             while(breq--)
             {
                 var pos = freeSlot();
