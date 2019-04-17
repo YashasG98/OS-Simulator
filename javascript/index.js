@@ -44,3 +44,9 @@ $("#start_menu").hide();
 function startmenu() {
 	$('#start_menu').toggle(100);
 }
+
+document.getElementById("start_menu").addEventListener("mouseleave", mouseLeave);
+
+function mouseLeave(){
+		$("#start_menu").hide();
+}
