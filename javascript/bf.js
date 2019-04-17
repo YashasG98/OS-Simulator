@@ -109,11 +109,12 @@ function addProcess(pro_size, pro_id, fromQ) {
     var found = 0;
     var best_ind = -1;
     var best_size = total_mem_size;
-    if(num_parts == 0) {
+    if(num_parts == 0 && total_mem_size>=pro_size) {
         best_ind = 0;
         best_size = total_mem_size;
         addPart(0, pro_size, pro_id);
         found = 1;
+
     }
     else {
         for(i = 0; i < num_parts; i++) {

@@ -106,7 +106,7 @@ function addProcessSize() {
 function addProcess(pro_size, pro_id, fromQ) {
     var i;
     var found = 0;
-    if(num_parts == 0) {
+    if(num_parts == 0 && total_mem_size>=pro_size) {
         addPart(0, pro_size, pro_id);
         found = 1;
     }
