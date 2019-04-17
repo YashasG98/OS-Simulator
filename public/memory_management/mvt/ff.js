@@ -249,6 +249,7 @@ function remProcess(id_pro) {
             break;
         }
     }
+    for(i=0;i<input_q_size;i++){ if(input_q_pro_id[i] == id_pro && found == 0) { var j; for(j=i+1;j<input_q_size;j++){ input_q_pro_id[j-1]=input_q_pro_id[j]; input_q_pro_size[j-1]=input_q_pro_size[j]; } found=1; input_q_size-=1; break; } }
     if(found == 1) {
         drawPart();
         var i;
