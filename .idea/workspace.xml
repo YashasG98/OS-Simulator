@@ -4,6 +4,7 @@
     <list default="true" id="1b555a99-b78b-4ba4-863b-3481755b55a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/bankers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/bankers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/cpu_scheduling/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/cpu_scheduling/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/disk_scheduling/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/disk_scheduling/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/file_allocation/contiguous.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/file_allocation/contiguous.html" afterDir="false" />
@@ -11,6 +12,16 @@
       <change beforePath="$PROJECT_DIR$/public/file_allocation/linked.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/file_allocation/linked.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/memory_management/mft.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory_management/mft.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/page_replacement/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/page_replacement/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/BankersAlgoWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/BankersAlgoWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/DiskSchedulingWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/DiskSchedulingWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/FAWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/FAWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/MFTWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/MFTWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/MVTWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/MVTWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/PageReplacement.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/PageReplacement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/ProcessSchedulingWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/ProcessSchedulingWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/ProcessSynchronizationWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/ProcessSynchronizationWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/SocketProgrammingWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/SocketProgrammingWiki.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/wiki/SystemCallsWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/SystemCallsWiki.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,82 +35,87 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/www">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/public/wiki/DiskSchedulingWiki.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="82" column="4" selection-start-line="82" selection-end-line="84" selection-end-column="12" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/cpu_scheduling/index.html">
+        <entry file="file://$PROJECT_DIR$/public/wiki/FAWiki.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" selection-start-line="27" selection-end-line="39" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="389">
+              <caret line="80" column="4" selection-start-line="80" selection-end-line="82" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/wiki/MFTWiki.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="73" selection-start-line="72" selection-end-line="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/wiki/MVTWiki.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="73" column="4" selection-start-line="73" selection-end-line="75" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/wiki/ProcessSchedulingWiki.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="97" selection-start-line="96" selection-end-line="101" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/bankers/index.html">
+        <entry file="file://$PROJECT_DIR$/public/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="124" column="129" selection-start-line="124" selection-start-column="129" selection-end-line="124" selection-end-column="129" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/disk_scheduling/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="102" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/memory_management/mft.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="204" column="18" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/memory_management/mvt_main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="90" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/memory_management/index.html">
+        <entry file="file://$PROJECT_DIR$/public/wiki/ProcessSynchronization.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/base.html">
+        <entry file="file://$PROJECT_DIR$/public/wiki/ProcessSynchronizationWiki.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state relative-caret-position="136">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/wiki/SocketProgrammingWiki.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/wiki/SystemCallsWiki.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1734">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -136,7 +152,6 @@
         <option value="$PROJECT_DIR$/javascript/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/PageReplacement/index.html" />
-        <option value="$PROJECT_DIR$/public/base.html" />
         <option value="$PROJECT_DIR$/public/page_replacement/index.html" />
         <option value="$PROJECT_DIR$/public/disk_scheduling/index.html" />
         <option value="$PROJECT_DIR$/public/file_allocation/indexed.html" />
@@ -145,6 +160,17 @@
         <option value="$PROJECT_DIR$/public/memory_management/mft.html" />
         <option value="$PROJECT_DIR$/public/cpu_scheduling/index.html" />
         <option value="$PROJECT_DIR$/public/bankers/index.html" />
+        <option value="$PROJECT_DIR$/public/wiki/PageReplacement.html" />
+        <option value="$PROJECT_DIR$/public/wiki/BankersAlgoWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/DiskSchedulingWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/FAWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/MFTWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/MVTWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/ProcessSchedulingWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/ProcessSynchronizationWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/SocketProgrammingWiki.html" />
+        <option value="$PROJECT_DIR$/public/wiki/SystemCallsWiki.html" />
+        <option value="$PROJECT_DIR$/public/base.html" />
       </list>
     </option>
   </component>
@@ -188,13 +214,18 @@
               <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="bankers" type="462c0819:PsiDirectoryNode" />
+              <item name="memory_management" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="cpu_scheduling" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="executables" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,7 +237,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pavan-OS/OS-Simulator" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -248,13 +279,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26577000" />
+    <option name="totallyTimeSpent" value="29065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16120219" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22131148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -266,7 +297,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29418105" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.28833693" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -345,10 +376,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/file_allocation/indexed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="42" column="118" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="118" />
+        <state relative-caret-position="415">
+          <caret line="109" column="7" lean-forward="true" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -379,31 +411,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/memory_management/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/memory_management/mft.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="204" column="18" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
+        <state relative-caret-position="377">
+          <caret line="252" column="18" lean-forward="true" selection-start-line="252" selection-start-column="18" selection-end-line="252" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/cpu_scheduling/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" selection-start-line="27" selection-end-line="39" selection-end-column="6" />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -413,12 +441,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bankers/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="124" column="129" selection-start-line="124" selection-start-column="129" selection-end-line="124" selection-end-column="129" />
+        <state relative-caret-position="383">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/process_synchronization/dining-philosopher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/PageReplacement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/BankersAlgoWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="106" column="4" selection-start-line="106" selection-end-line="108" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/memory_management/memory_management.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/DiskSchedulingWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="82" column="4" selection-start-line="82" selection-end-line="84" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/FAWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="80" column="4" selection-start-line="80" selection-end-line="82" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/MFTWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="73" selection-start-line="72" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/MVTWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="73" column="4" selection-start-line="73" selection-end-line="75" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/ProcessSchedulingWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="97" selection-start-line="96" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/ProcessSynchronization.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/ProcessSynchronizationWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/SocketProgrammingWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/wiki/SystemCallsWiki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
         </state>
       </provider>
     </entry>
