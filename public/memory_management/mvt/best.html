@@ -1,0 +1,141 @@
+<html>
+<head>
+    <!-- Bootstrap JS for providing a behaviour and to support -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Linking CSS files -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        table {
+            margin: 5px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+    <title>MVT-Best fit</title>
+</head>
+<body>
+<nav class="bg-dark navbar-dark fixed-top">
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:4px; ">
+            <a class="w3-bar-item w3-button" style="font-size: 15px; font-family: serif; " href="best.html">Best Fit</a>
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a class="w3-bar-item w3-button" style="font-size: 15px; font-family: serif;" href="worst.html">worst Fit</a>
+                <a class="w3-bar-item w3-button" style="font-size: 15px; font-family: serif;" href="first.html">First Fit</a>
+                <a class="w3-bar-item w3-button" style="font-size: 15px; font-family: serif;"  href="wiki.html">Wiki</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div style="text-align: center;   margin-bottom: 20px;">
+    <h1>MVT Memory Management Simulation</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-3  m-5">
+        <div class="m-2">
+            <div class="form-group">
+                <label>Size of memory: </label>
+                <br>
+                <input type="text" class="form-control" id="mem-size" placeholder="Enter size of memory: ">
+            </div>
+            <button type="submit" class="btn btn-primary" id="mem-size-btn">Go</button>
+        </div>
+        <div id="add-rem-pro-btns">
+        </div>
+        <br>
+        <div class="m-2" id="add-rem-pro">
+        </div>
+
+    </div>
+    <div class="col-md-3 m-5">
+
+        <div id="canvas" class="ml-5 mt-5">
+        </div>
+    </div>
+    <div class="col-md-3 m-5">
+        <div id="compaction">
+        </div>
+        <div id="input-q-table">
+        </div>
+    </div>
+</div>
+
+<!--<div class="start-menu" id="start_menu">
+    <nav class="navbar navbar-default fixed-bottom" role="navigation">
+        <div class="side-menu-container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="nav-item nav-link active" href="#socket"><span class="glyphicon glyphicon-comment"></span>System Calls</a>
+                </li>
+                <li>
+                    <a href="../ProcessScheduling/index.html" class="nav-item nav-link"><span class="glyphicon glyphicon-tasks"></span>Process Scheduling</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../ProcessSynchronization/index.html"><span class="glyphicon glyphicon-refresh"></span>Process Synchronization</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../Bankers/index.html"><span class="glyphicon glyphicon-equalizer"></span>Bankers Algorithm</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../PageReplacement/index.html"><span class="glyphicon glyphicon-duplicate"></span>Page Replacement</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../MVT/index.html"><span class="glyphicon glyphicon-hdd"></span>Memory Management (MVT)</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../MFT/index.html"><span class="glyphicon glyphicon-hdd"></span>Memory Management (MFT)</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../DiskScheduling/index.html"><span class="glyphicon glyphicon-cd"></span>Disk Scheduling</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../FileAllocation/index.html"><span class="glyphicon glyphicon-file"></span>File Allocation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="start-bottom">
+    <button class="start" data-toogle="tooltip" title="Search your Computer" onclick="startmenu()">
+        <img src="../images/thumb_Start.png" width="40px" height="40px" alt="start" />
+    </button>
+    <div class="date-time">
+        <span class="time"></span>
+        <span class="am-pm"></span><br>
+        <span class="date"></span>
+    </div>
+</div>-->
+
+<script src="./bf.js"></script>
+
+</body>
+</html>
