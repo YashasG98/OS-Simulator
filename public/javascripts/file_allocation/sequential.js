@@ -13,13 +13,13 @@ var count_available_file=0
 var queueSize=5;
 
 //-----------------------------driver-------------------------------
+
 $(document).ready(function () {
     $("#submit-glob").click(function(){
         diskCapacity=Number($("#tot-mem").val());
         blockCapacity=Number($("#block-size").val());
         n=diskCapacity/blockCapacity;
         n=parseInt(n);
-        //updateBlockCapacity();
         htmlText=
         `
         <div id="disk-info">
@@ -28,25 +28,23 @@ $(document).ready(function () {
             <div id="block-count">Total Blocks:`+String(n)+`</div>
         </div>
         <br>
-        `;
+        `
         $("#global").html(htmlText);
 
         initilize();
     });
     
 });
+
 function initilize(){
     for(var i=0;i<n;i++)
     {
-        blocks.push({fid: -1,metaData:0,entries:[]});
-        for(var j=0;j<50;j++)
-        {
-            blocks[i].entries[j]=0;
-        }    
+        blocks.push({fid:-1,xy:""});
+        
     }
     for(var i =0;i<queueSize;i++)
     {
-        queue.push({id: -1,breq: -1 });
+        queue.push({ id: -1,breq: -1 });
     }
     for(var i=0;i<50;i++)
     {
@@ -54,7 +52,7 @@ function initilize(){
     }
     listen();
 }
-
+//
 function listen()
 {
     htmlText=
@@ -87,8 +85,7 @@ function listen()
 }
 
 
-//------------------------------------- Input UI-------------------------
-
+//-------------------------------- Input -------------------------------
 function InputUI(){
 
     htmlText =
@@ -117,12 +114,11 @@ function InputUI(){
 
 }
 
+function AddFile(fid) {
+    var id=Number($("#file-id-"+String(fid)).val());
+    var size=Number($("#file-size-"+String(fid)).val());
+    var name=$("#file-name-"+String(fid)).val();
 
-function AddFile(file_id){
-    var id=Number($("#file-id-"+String(file_id)).val());
-    var size=Number($("#file-size-"+String(file_id)).val());
-    var name=$("#file-name-"+String(file_id)).val();
-    
     if(isNaN(size))
     {
         alert("Size = "+$("#file-size-"+String(fid)).val()+" is not a valid input Must be numeric");
@@ -135,69 +131,89 @@ function AddFile(file_id){
         print("AddFile: Invalid size or File Name variable","output-log");
         return;
     }
-    else{
-        var breq=ceilDivision(size, blockCapacity)+1;
-        if(freeMemory() < breq){
-            file = {id,breq};
+    else
+    {
+        var breq=ceilDivision(size, blockCapacity);
+        var pos = findStartBlock(breq);
+        if(pos == -1)
+        {
+            file= {id,breq};
             queue[++rear] = file;
-
             AddToFileList(name,id,size,breq,1);
-            print("Addfile: file Id: "+id+"  Not enough memory Added to Queue","output-log");
+            if(externalFragmentation() >= breq)
+            {
+                print("Addfile: File Id: "+id+" External Fragmentation, File Added to Queue","output-log");
+    
+            }
+            else
+            {
+                print("Addfile: File Id: "+id+"  Not enough memory, File Added to Queue","output-log");
+    
+            }
+                
         }
-        else{
-            var p = freeSlot();
-            blocks[p].fid = id;
-            blocks[p].metaData = 1;
-            var curr = 0;
-
-
+        else
+        {
+            for(var i=pos; i<pos+breq; i++)
+            {
+                blocks[i].fid = id;
+            }
             AddToFileList(name,id,size,breq,0);
             print("AddFile: File Id: "+id+" Added in disk","output-log");
 
-            breq--;
-            while(breq--)
-            {
-                var pos = freeSlot();
-                blocks[pos].fid = id;
-                blocks[pos].metaData = 0;
-                blocks[p].entries[curr++] = pos;
-            }
-
-            blocks[p].entries[curr] = -1;
-
         }
     }
-    
 }
 
 function ceilDivision(a,b){
 	return parseInt(a/b) + (a%b != 0);
 }
 
-function freeSlot(){
-	for(var i=0; i<n; i++)
-		if(blocks[i].fid == -1)
-			return i;
-}
+function findStartBlock(siz) {
+    i=0
+    var flag;
+	while(i<n)
+	{
+		if(blocks[i].fid != -1)
+		{
+			i++;
+			continue;
+		}
 
-function freeMemory(){
+		flag = 1;
+		for(var j=i; j<siz+i; j++)
+			if(j==n || blocks[j].fid != -1 )
+			{
+				flag = 0;
+				i = j;
+				break;
+			}
+
+		if(flag)
+			return i;
+
+		i++;
+	}
+
+	return -1;
+}
+function externalFragmentation()
+{
 	var ret = 0;
-	for(var i=0; i<n; i++)
-		if(blocks[i].fid == -1)
-			ret++;
+    for(var i=0; i<n; i++)
+    {
+        if(blocks[i].fid == -1)
+        {
+            ret++;
+        }
+    }
+		
+			
+
 	return ret;
 }
-function updateBlockCapacity()
-{
-	var p=0;
-	while((1<<p) < n)
-		p++;
 
-	p = ceilDivision(p, 8); //Bytes
-	blockCapacity -= p;
-}
-
-//--------------------------------------------- Delete UI --------------------------------------
+// --------------------------------------- Delete --------------------------------------
 
 function DeleteUI(){
     htmlText =
@@ -226,19 +242,18 @@ function DeleteUI(){
 }
 
 function DeleteFile(id){
-    var flag=0
-    for(var i=0; i<n; i++){
+    var flag=0;
+    for(var i=0; i<n; i++)
+    {
         if(blocks[i].fid == id)
         {
             blocks[i].fid = -1;
-            blocks[i].metaData = 0;
             flag=1;
         }
     }
     if(flag==0){
         alert("file id: "+id+" not available in disk");
-        print("DeleteFile: File id: "+id+" not available in Disk","output-log");
-
+        print("DeleteFile: File Id: "+id+" not available in Disk","output-log");
     }
     else{
         changeFileStatus(id,"delete");
@@ -251,37 +266,38 @@ function insertFilesFromQueue()
 {
 	for(var i=front; i<=rear; i++)
 	{
-		if(freeMemory() < queue[i].breq +1)
-        print("InsertFileFromQueue: File id "+queue[i].id+" Not enough memory\n", queue[i].id);
+        var pos = findStartBlock(queue[i].breq);
+		if(pos == -1)
+		{
+            if(externalFragmentation() >= queue[i].breq)
+            {
+                print("insertFilesFromQueue: External Fragmentation","output-log");
+            }
+				
+            else
+            {
+                print("insertFilesFromQueue: Not enough memory","output-log");
+                
+            }
+				
+		}
 		else
 		{
             changeFileStatus(queue[i].id,"update");
-            print("insertFilesFromQueue: File id: "+queue[i].id+" Moved from Queue to Disk","output-log");
-			var p = freeSlot();
-			blocks[p].fid = queue[i].id;
-			blocks[p].metaData = 1;
-			var curr = 0;
+            print("insertFilesFromQueue: File id:"+queue[i].id+" Moved from Queue to Disk","output-log");
+			for(var j=pos; j<pos+queue[i].breq; j++)
+				blocks[j].fid = queue[i].id;
 
-			var siz = queue[i].breq;
-			while(siz--)
-			{
-				var pos = freeSlot();
-				blocks[pos].fid = queue[i].id;
-				blocks[pos].metaData = 0;
-				blocks[p].entries[curr++] = pos;
-			}
-
-            blocks[p].entries[curr] = -1;
-            
-            for(var j=i-1; j>=front; j--)
+			for(var j=i-1; j>=front; j--)
 				queue[j+1] = queue[j];
             front++;
+            
 		}
 	}
 }
 
 
-//---------------------------------------------- Search UI --------------------------
+//------------------------- Search ------------------------
 function SearchUI()
 {
     htmlText =
@@ -314,41 +330,33 @@ function SearchUI()
     });
 }
 
-function Search(id){
-    var flag = -1;
+function Search(id) {
+    var flag = 0;
     for(var i=0; i<n; i++)
-        if(blocks[i].fid == id && blocks[i].metaData == 1)
-        {
-            flag = i;
-            break;
-        }
-
-    if(flag == -1)
+        flag += (blocks[i].fid == id);
+    if(!flag)
     {
-        print("Search: File id: "+id+"  not found in Disk","output-log");
-        alert("file Id: "+id+" not found in disk");
+        print("Search: File Id: "+id+"  not found in Disk","output-log");
+        alert("File Id: "+id+" not found in disk");
     }
     else
     {
         print("Search: File Id: "+id+" Found","output-log");
-        
         htmlText=
         `
         <strong>Search Result</strong>
         <hr>
-        <p>Metadata of blocks for File Id: `+id+` is present in Block </p>
-        <span class="badge badge-pill badge-info">`+flag+`</span>
         <p>Blocks Ids in  which File Id: `+id+` is present is</p>
         <p>
         `;
-        var curr = 0;
-        while(blocks[flag].entries[curr] != -1){
-            htmlText+=
+        for(var i=0; i<n; i++){
+            if(blocks[i].fid == id){
+                
+                htmlText+=
                 `
-                <span class="badge badge-pill badge-info">`+blocks[flag].entries[curr++]+`</span>
-                `
-            ;
-    
+                <span class="badge badge-pill badge-info">`+i+`</span>
+                `;
+            }
         }
         htmlText+=
             `
@@ -356,10 +364,11 @@ function Search(id){
             <hr>
             `;
         $("#search-query").html(htmlText);
+            
     }
 }
-//----------------------------------- Utility functions ----------------------------
 
+//------------------ Ulility functions -------------------------------------------
 
 function printDisk(){
     htmlText=
@@ -412,7 +421,7 @@ function ViewBlocks(bid){
         `
         <div id="block-detail">
             <p><div>Block Id: `+bid+`</div>
-            <div>Block content: `+BValue(blocks[bid].metaData)+`</div>
+            <div>Block content: Data</div>
             <div>File id: `+blocks[bid].fid+`</div>
             <div>File Name:`+files[i].name+`</div>
             <div>File Size:`+files[i].size+`</div>
@@ -431,13 +440,6 @@ function ViewBlocks(bid){
     }
     return(htmlText);
     
-}
-
-function BValue(i){
-    if(i==1)
-        return "Index";
-    else
-        return "Data";
 }
 
 function findFile(id){
