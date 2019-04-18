@@ -1,6 +1,5 @@
 /*
 
-Done By Mahir Jain 16CO123
 
 IO FORMAT
 
