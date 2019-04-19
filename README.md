@@ -3,7 +3,6 @@ User Interface simulating the major concepts of Operating Systems.
 
 ### Simulations Done
 - System Calls (Terminal based GUI)
-- Socket Programming 
 - CPU Scheduling 
 - Process Synchronization
 - Disk Scheduling
@@ -13,8 +12,6 @@ User Interface simulating the major concepts of Operating Systems.
 
 ### Extra Algorithms Simulated
 - Multilevel Queue Scheduling
-- Sleeping Barber Problem
-- Second Chance Page Replacement Algorithm
 
 ### Installation Instructions
 <b>Ubuntu</b>
@@ -39,4 +36,4 @@ User Interface simulating the major concepts of Operating Systems.
 - cd os-simulator
 - `npm install` (To install all the dependency packages)
 - `npm start`
-- Go to Browser and type http://localhost:3000
+- Go to Browser and type http://localhost:8000
