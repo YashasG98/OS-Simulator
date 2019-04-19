@@ -1,0 +1,36 @@
+/* #particles-js, #particles-js > canvas {
+	position: absolute;
+	width: 100%;
+	height: 140vh;
+	background-color: #000;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+} */
+
+div .list-group {
+  margin-top: 20px;
+}
+
+.panel .list-group {
+  margin-top: 0px;
+}
+
+.panel {
+  margin-top: 15px;
+}
+
+/* Visualization CSS */
+#controller {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.code-panel {
+  padding: 0px 0px 0px;
+}
+
+.panel-label {
+  float: right;
+}

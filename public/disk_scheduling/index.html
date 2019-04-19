@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disk Scheduling</title>
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.1.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/common.css">
+</head>
+
+<nav>
+    <div class="nav-wrapper teal darken-4">
+        <a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+        <ul class="right hide-on-med-and-down">
+            <a class="waves-effect waves-light green btn" href='../wiki/DiskSchedulingWiki.html'>Wiki</a>
+            <li><a href="../cpu_scheduling">Process Scheduling</a></li>
+            <li><a href="../page_replacement">Page Replacement</a></li>
+            <li><a href="../bankers">Banker's Algorithm</a></li>
+            <li><a href="../process_synchronization">Process Synchronization</a></li>
+            <li><a href="../memory_management">Memory Management</a></li>
+            <li><a href="../file_allocation">File Management</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <div class="container" style="margin: 0;">
+        <div class="header-section">
+        <div id="particles-js" class="teal">
+        </div>
+        <div class="header-font center-align">
+            <span class="topic" style="margin-top: 50px; display: inline-block">Disk Scheduling</span>
+        </div>
+        </div>
+    </div>
+</header>
+        
+    </ul>
+    <div class="row">
+    	<!-- <div class="text-center">
+    		<h3  class = "col-sm-4" style="color:white"><b>Cylinder Size</b></h3>
+    		<h3  class = "col-sm-4" style="color:white"><b>Current Head Position</b></h3>
+    		<h3  class = "col-sm-4" style="color:white"><b>Previous Head Position</b></h3>
+    	</div> -->
+    </div>
+    <div class="container">
+    <div class="row">
+
+    	<div class="input-field col s4 text-center">
+    		<input class="validate" id="csize" type="text"></input>
+            <label for="head_pos">Enter Cylinder Size</label>
+    	</div>
+    	<div class="input-field col s4 text-center">
+    		<input class="validate" id="cur" type="text"></input>
+            <label for="head_pos">Enter current head position</label>
+    	</div>
+    	<div class="input-field col s4 text-center">
+    		<input class="validate" id="prev" type="text"></input>
+            <label for="head_pos">Enter previous head position</label>   	
+        </div>
+    </div>
+    </div>
+    <div class="row text-center">
+        <div id="n_req" style="display: none;">0</div>
+        <div class = "col s6" style="padding-top:10px;font-size: 35px;">
+        <a  style="float: right" class="btn btn-primary mb1 bg-lime teal darken-4" href="javascript:add_request()">Add Request</a>
+        </div>
+        <div class = "col s6" style="padding-top:8px;font-size: 35px;">
+        <a  style="float: left" class="btn btn-primary mb1 bg-lime teal darken-4" href="javascript:remove_request()">Remove Request</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="requests">
+
+        </div>
+        <div class="row">
+         <a class="waves-effect waves-light btn teal darken-4" onclick="javascript:submit()" href="#charts" >Submit</a>
+        </div>
+    </div>
+
+    <div id="charts">
+    </div>
+    <br>
+    <div id="fcfs">
+    </div>
+    <br>
+    <div id="sstf">
+    </div>
+    <br>
+    <div id="look">
+    </div>
+    <br>
+    <div id="scan">
+    </div>
+    <br>
+    <div id="clook">
+    </div>
+    <br>
+    <div id="cscan">
+    </div>
+    
+</div>
+<!--<div class="fixed-action-btn">
+        <a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+          <i class="large material-icons">folder</i>
+        </a>
+        &lt;!&ndash; <ul>
+          <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="NRZ-L" href="../nrz-l"><i class="material-icons" >L</i></a></li>
+          <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="NRZ-I" href="../nrz-i"><i class="material-icons">I</i></a></li>
+          <li><a class="btn-floating tooltipped green" data-position="left" data-tooltip="Manchester" href="../manchester"><i class="material-icons">M</i></a></li>
+          <li><a class="btn-floating tooltipped blue" data-position="left" data-tooltip="Differential Manchester" href="../differential-manchester"><i class="material-icons">D</i></a></li>
+          <li><a class="btn-floating tooltipped black" data-position="left" data-tooltip="Polar Encodings" href="../polar"><i class="material-icons">P</i></a></li>
+        </ul>
+        <div class="fixed-action-btn horizontal">
+          <a class="btn-floating btn-large red" data-position="bottom" data-tooltip="Home" href="../">
+            <i class="large material-icons">folder</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating tooltipped green" data-position="top" data-tooltip="Bipolar" href="../bipolar"><i class="material-icons">B</i></a></li>
+            <li><a class="btn-floating tooltipped blue" data-position="top" data-tooltip="Pseudoternary" href="../pseudoternary"><i class="material-icons">P</i></a></li>
+            <li><a class="btn-floating tooltipped black" data-position="top" data-tooltip="AMI" href="../ami"><i class="material-icons">A</i></a></li>
+          </ul>
+        </div> &ndash;&gt;
+      </div>-->
+    
+<script type="text/javascript" src="/javascripts/disk_scheduling/disk_scheduling.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+</body>
+</html>

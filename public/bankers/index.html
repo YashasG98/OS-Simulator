@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bankers Algorithm</title>
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/javascripts/bankers/bankers.js"></script>
+
+    <style type="text/css">
+      ::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+
+    </style>
+    <link href="/stylesheets/team.css" rel="stylesheet">
+</head>
+<body>
+<div>
+<div>
+
+    <nav>
+        <div class="nav-wrapper teal darken-4">
+            <a href="../" class="brand-logo" style="margin-left: 20px;">OS Simulator</a>
+            <ul class="right hide-on-med-and-down">
+                <a class="waves-effect waves-light green btn" href='../wiki/BankersAlgoWiki.html'>Wiki</a>
+                <li><a href="../page_replacement">Process Scheduling</a></li>
+                <li><a href="../disk_scheduling">Disk Scheduling</a></li>
+                <li><a href="../bankers">Banker's Algorithm</a></li>
+                <li><a href="../process_synchronization">Process Synchronization</a></li>
+                <li><a href="../memory_management">Memory Management</a></li>
+                <li><a href="../file_allocation">File Management</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <header>
+      <div class="container" style="margin: 0;">
+        <div class="header-section">
+          <div id="particles-js" class="teal">
+          </div>
+          <div class="header-font center-align">
+              <span class="topic" style="margin-top: 50px; display: inline-block">Bankers Alogrithm</span>
+          </div>
+        </div>
+      </div>
+  </header>
+  <div class="row">
+  <div class="col s3">
+    
+    <h4>
+      Safety Sequence
+    </h4>
+    </div>
+  </div>
+<div class="row">
+    <div class="col s12">
+      <form id="1" class="col s3">
+        <div id="c1" >
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="np" type="text" >
+            <label for="np">Number of Processes</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input  id="nr" type="text" >
+            <label for="nr">Number of Resources</label>
+          </div>
+        </div>
+
+
+        </div>
+        <div class="row">
+        <a style="background-color:black;font-size: 15px;" id="b1" class="waves-effect waves-light btn-large teal darken-4">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+        </div>
+      </form>
+
+
+      <form style="display: none;" id="2" class="col s3">
+      <div class="row">
+        <div id="c2" >
+      
+        </div>
+        </div>
+        <div class="row">
+         <a id="b2" style="background-color:black;font-size: 15px;" class="waves-effect waves-light btn-large">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+         </div>
+
+      </form>
+
+      <form style="display: none;" id="3" class="col s3">
+        <div class="row">
+        <div id="c3" style="float:left;width: 100%">
+
+        </div>
+        </div>
+        <div class="row">
+        <a style="background-color:black;font-size: 15px;" id="b3" class="waves-effect waves-light btn-large">Continue<i style="font-size:15px;margin-left: 10px;" class="fa fa-arrow-right"></i></a>
+        </div>
+
+      </form>
+
+      <div style="display:none;" id="4" class="col s3">
+      <div class="row">
+        <div id="c4" style="float:left;width: 100%">
+
+        </div>
+        </div>
+        <div class="row">
+        <a style="background-color:black;font-size: 15px;" id="ss_action" class="waves-effect waves-light btn-large teal darken-4">Find Sequence </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col s12 center">
+            <div id="result" style="display: none;width:inherit;">
+            </div>
+            <div style="display:block;margin-top:50px;font-size:20px;width: 100%;" id="is">
+              Input Processes Order   
+            </div>
+              <br>
+              <i class=" fa fa-arrow-down" style="font-size: 30px;"></i>
+             <div id="bb" class="center-block teal darken-4" style="width:20%;padding:40px;background-color: black">
+            </div>      
+              <i class="fa fa-arrow-down" style="font-size: 30px;"></i>
+              <br>
+            <div  id="os" style="font-size:20px;width: 100%;">
+              Output Processes Order  
+            </div>
+      </div>
+      
+
+    </div>
+
+
+      
+    <div  >
+
+    </div>
+  <div class="row">
+  <div class="col s3">
+    
+    <h4>
+      Resource Allocation
+    </h4>
+    </div>
+  </div>
+      <br>
+      <br>
+<div class="row">
+  <div class="col s3">
+          <div class="row">
+          <div class="input-field col s12">
+            <input  id="rpn" type="text" >
+            <label for="rpn">Enter Requesting Process Number</label>
+          </div>
+        </div>
+      <br>
+      <br>
+      </div>
+      <div class="col s3">
+      <span style="font-size:18px;margin-left: 30px;" id="ra_text">
+      
+      </span>    
+      </div>  
+      <br>
+      <br>
+      <div class="col s3">
+      <span class="col s12" id="ra_nr" style="margin-left: 18px;">
+
+      </span>
+      <br>
+      <br>
+</div>
+
+        <a style="background-color:black;font-size: 15px;" id="ra_action" class="col s1 waves-effect waves-light btn-large teal darken-4">Find Sequence </a>
+      
+      <span style="font-size:20px;" class="col s3 center" id="ra_res">
+        
+      </span>
+    </div>
+</div>
+</div>
+<div class="fixed-action-btn">
+    <!--<a class="btn-floating btn-large tooltipped red" data-position="left" data-tooltip="Home" href="../">
+      <i class="large material-icons">folder</i>
+    </a>-->
+    <!-- <ul>
+      <li><a class="btn-floating tooltipped red" data-position="left" data-tooltip="NRZ-L" href="../nrz-l"><i class="material-icons" >L</i></a></li>
+      <li><a class="btn-floating tooltipped yellow darken-1" data-position="left" data-tooltip="NRZ-I" href="../nrz-i"><i class="material-icons">I</i></a></li>
+      <li><a class="btn-floating tooltipped green" data-position="left" data-tooltip="Manchester" href="../manchester"><i class="material-icons">M</i></a></li>
+      <li><a class="btn-floating tooltipped blue" data-position="left" data-tooltip="Differential Manchester" href="../differential-manchester"><i class="material-icons">D</i></a></li>
+      <li><a class="btn-floating tooltipped black" data-position="left" data-tooltip="Polar Encodings" href="../polar"><i class="material-icons">P</i></a></li>
+    </ul>
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red" data-position="bottom" data-tooltip="Home" href="../">
+        <i class="large material-icons">folder</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating tooltipped green" data-position="top" data-tooltip="Bipolar" href="../bipolar"><i class="material-icons">B</i></a></li>
+        <li><a class="btn-floating tooltipped blue" data-position="top" data-tooltip="Pseudoternary" href="../pseudoternary"><i class="material-icons">P</i></a></li>
+        <li><a class="btn-floating tooltipped black" data-position="top" data-tooltip="AMI" href="../ami"><i class="material-icons">A</i></a></li>
+      </ul>
+    </div> -->
+  </div>
+
+</body>
+</html>
