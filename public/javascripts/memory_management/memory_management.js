@@ -93,7 +93,7 @@ function submit2(){
     //from the number of processes value create the appropriate number of text fields for entering memory required for each process
     num_proc = S("num_proc").value;
 
-    if(num_proc>9 || num_proc<0){
+    if(num_proc>20 || num_proc<0){
 
         alert("Input error.Restart!");
         document.location.reload();
@@ -280,7 +280,7 @@ function submit3(){
         scaledown = 1.2;
 
     //For the box part
-    for(var i=0;i<num_part;++i){
+    /*for(var i=0;i<num_part;++i){
 
         pos = find_partition(i);
 
@@ -335,7 +335,7 @@ function submit3(){
             t2 = S('internalfragbox' + i);
             $(t2).css("width", diff*scaledown + "px");
         }
-    }
+    }*/
     $('#in').fadeIn();
     //add totalinternal
 }
