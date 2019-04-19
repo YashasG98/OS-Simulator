@@ -85,6 +85,12 @@ function startColumn2() {
 }
 
 function addProcessSize() {
+        var htmlText =
+        `
+    <button type="submit" class="btn btn-primary" id="add-pro-btn">Add process</button>
+    <button type="submit" class="btn btn-primary" id="rem-pro-btn">Remove process</button>
+    `;
+    $("#add-rem-pro-btns").html(htmlText);
     var htmlText =
         `
     <div class="form-group">
@@ -366,7 +372,7 @@ function calcExtFrag(pro_size) {
         }
     }
     tot_hole_size += total_mem_size - part_end[num_parts-1];
-    if(tot_hole_size > pro_size) {
+    if(tot_hole_size >= pro_size) {
         alert("External Fragmentation is " + tot_hole_size);
         alert("you can compact and add this process");
     }
