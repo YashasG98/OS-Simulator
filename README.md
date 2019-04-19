@@ -2,7 +2,6 @@
 User Interface simulating the major concepts of Operating Systems.
 
 ### Simulations Done
-- System Calls (Terminal based GUI)
 - CPU Scheduling 
 - Process Synchronization
 - Disk Scheduling
