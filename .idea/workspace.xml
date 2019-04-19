@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b555a99-b78b-4ba4-863b-3481755b55a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/memory_management/memory_management.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/memory_management/memory_management.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/system_calls/system_calls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/memory_management/mft.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/memory_management/mft.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page_replacement/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/page_replacement/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/process_synchronization/producer-consumer.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/process_synchronization/producer-consumer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/wiki/MFTWiki.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/wiki/MFTWiki.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/executables/page_replacement/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/executables/page_replacement/page_replacement" beforeDir="false" afterPath="$PROJECT_DIR$/routes/executables/page_replacement/page_replacement" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/executables/page_replacement/page_replacement.c" beforeDir="false" afterPath="$PROJECT_DIR$/routes/executables/page_replacement/page_replacement.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/css/fileallocation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/html/indexed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/html/linked.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/html/sequential.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/js/indexed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/js/linked.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file_allocation/js/sequential.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo-ubuntu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/Ashrit26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/Nihalh55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/bobbypt05.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/himanshu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/m0bi5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/mahir.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/mishal23.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/members/palak.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/file_allocation/contiguous.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/file_allocation/indexed.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/file_allocation/indexed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/file_allocation/linked.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/file_allocation/linked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/file_allocation/contiguous.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/file_allocation/indexed.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,24 +36,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/file_allocation/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="43" column="10" lean-forward="true" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#li#0;n#div#0;n#a#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#li#0;n#div#0;n#a#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#li#0;n#div#0;n#a#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -100,11 +96,7 @@
         <option value="$PROJECT_DIR$/public/memory_management/mvt/ff.js" />
         <option value="$PROJECT_DIR$/public/memory_management/mvt/wf.js" />
         <option value="$PROJECT_DIR$/public/file_allocation/js/index.js" />
-        <option value="$PROJECT_DIR$/public/file_allocation/js/indexed.js" />
-        <option value="$PROJECT_DIR$/public/file_allocation/js/linked.js" />
-        <option value="$PROJECT_DIR$/public/file_allocation/js/sequential.js" />
         <option value="$PROJECT_DIR$/public/base.html" />
-        <option value="$PROJECT_DIR$/public/file_allocation/html/indexed.html" />
         <option value="$PROJECT_DIR$/public/file_allocation/html/linked.html" />
         <option value="$PROJECT_DIR$/public/file_allocation/html/sequential.html" />
         <option value="$PROJECT_DIR$/public/file_allocation/html/index.html" />
@@ -115,6 +107,10 @@
         <option value="$PROJECT_DIR$/routes/executables/page_replacement/page_replacement.c" />
         <option value="$PROJECT_DIR$/public/page_replacement/index.html" />
         <option value="$PROJECT_DIR$/public/process_synchronization/producer-consumer.html" />
+        <option value="$PROJECT_DIR$/public/file_allocation/js/indexed.js" />
+        <option value="$PROJECT_DIR$/public/file_allocation/js/linked.js" />
+        <option value="$PROJECT_DIR$/public/file_allocation/js/sequential.js" />
+        <option value="$PROJECT_DIR$/public/file_allocation/html/indexed.html" />
       </list>
     </option>
   </component>
@@ -153,26 +149,6 @@
               <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="file_allocation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="file_allocation" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OS-Simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OS-Simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="file_allocation" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,18 +198,17 @@
       <workItem from="1555428555343" duration="5756000" />
       <workItem from="1555443078310" duration="10531000" />
       <workItem from="1555456502456" duration="533000" />
-      <workItem from="1555601111600" duration="10852000" />
+      <workItem from="1555601111600" duration="11437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42431000" />
+    <option name="totallyTimeSpent" value="43016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22185792" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22185792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -245,7 +220,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22786178" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32721382" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -522,48 +497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/indexed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9843">
-          <caret line="579" column="1" selection-start-line="579" selection-start-column="1" selection-end-line="579" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/linked.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8116">
-          <caret line="568" column="1" selection-start-line="568" selection-start-column="1" selection-end-line="568" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/sequential.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="581" column="1" selection-start-line="581" selection-start-column="1" selection-end-line="581" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="94" column="80" selection-start-line="94" selection-start-column="80" selection-end-line="94" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/file_allocation/html/indexed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -678,6 +615,34 @@
     <entry file="file://$PROJECT_DIR$/routes/page_replacement.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/indexed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8228">
+          <caret line="609" column="1" selection-start-line="609" selection-start-column="1" selection-end-line="609" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/sequential.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="602" column="18" lean-forward="true" selection-start-line="602" selection-start-column="18" selection-end-line="602" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/file_allocation/js/linked.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4029">
+          <caret line="596" column="1" selection-start-line="596" selection-start-column="1" selection-end-line="596" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/file_allocation/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -688,6 +653,16 @@
             <element signature="n#style#0;n#b#0;n#li#0;n#div#0;n#a#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#li#0;n#div#0;n#a#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#li#0;n#div#0;n#a#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/file_allocation/html/indexed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
