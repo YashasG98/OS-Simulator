@@ -1,6 +1,5 @@
 /*
 
-Done By Mohit Bhasi 16CO126
 
 IO FORMAT
 
