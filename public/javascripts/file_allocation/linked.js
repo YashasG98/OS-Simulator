@@ -14,25 +14,32 @@ var queueSize=5;
 var flag=0;
 //-----------------------------driver-------------------------------
 
+
 $(document).ready(function () {
     $("#submit-glob").click(function(){
         diskCapacity=Number($("#tot-mem").val());
         blockCapacity=Number($("#block-size").val());
-        n=diskCapacity/blockCapacity;
-        n=parseInt(n);
-        updateBlockCapacity();
-        htmlText=
-        `
-        <div id="disk-info">
-            <div id="mem-info">Disk Capacity: ` +String(diskCapacity)+`</div>
-            <div id="block-info">Block Capacity:`+String(blockCapacity)+`</div>
-            <div id="block-count">Total Blocks:`+String(n)+`</div>
-        </div>
-        <br>
-        `;
-        $("#global").html(htmlText);
-
-        initilize();
+        if(blockCapacity<=0 || diskCapacity<=0){
+            alert("Invalid Input");
+        }
+        else{
+            n=diskCapacity/blockCapacity;
+            n=parseInt(n);
+            updateBlockCapacity();
+            htmlText=
+            `
+            <div id="disk-info">
+                <div id="mem-info">Disk Capacity: ` +String(diskCapacity)+`</div>
+                <div id="block-info">Block Capacity:`+String(blockCapacity)+`</div>
+                <div id="block-count">Total Blocks:`+String(n)+`</div>
+            </div>
+            <br>
+            `
+            $("#global").html(htmlText);
+    
+            initilize();
+        }
+        
     });
     
 });
