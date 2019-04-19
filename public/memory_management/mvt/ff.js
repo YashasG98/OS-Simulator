@@ -30,18 +30,18 @@ $(document).ready(function() {
 
         today = dd + '-' + mm + '-' + yyyy;
 
-        if(minutes<10) 
+        if(minutes<10)
         {
             minutes = "0" + minutes;
         }
 
-        if(hours>=12) 
+        if(hours>=12)
         {
             hours = hours-12;
             $('.start-bottom .date-time .am-pm').text('PM');
         }
 
-        else 
+        else
         {
             $('.start-bottom .date-time .am-pm').text('AM');
         }
@@ -60,14 +60,14 @@ $(document).ready(function() {
 });
 
 function startColumn2() {
-     var htmlText =
-    `
+    var htmlText =
+        `
     <button type="submit" class="btn btn-primary" id="add-pro-btn">Add process</button>
     <button type="submit" class="btn btn-primary" id="rem-pro-btn">Remove process</button>
     `;
     $("#add-rem-pro-btns").html(htmlText);
     var htmlText =
-    `
+        `
     <canvas id="myCanvas" width="170" height="520" style="border:1px solid #d3d3d3;">
                 Your browser does not support the HTML5 canvas tag.</canvas>
     `;
@@ -86,7 +86,7 @@ function startColumn2() {
 
 function addProcessSize() {
     var htmlText =
-    `
+        `
     <div class="form-group">
         <label>Size of process to be added: </label>
         <input type="text" class="form-control" id="add-pro-size" placeholder="Enter size of process to be added">
@@ -214,8 +214,8 @@ function drawPart() {
 }
 
 function remProcessId() {
-     var htmlText =
-    `
+    var htmlText =
+        `
     <div class="form-group">
         <label>Id of process to be removed: </label>
         <input type="text" class="form-control" id="rem-pro-id" placeholder="Enter id of process to be removed">
@@ -249,19 +249,7 @@ function remProcess(id_pro) {
             break;
         }
     }
-        for(i=0;i<input_q_size;i++){
-        if(input_q_pro_id[i] == id_pro && found == 0) {
-
-            var j;
-            for(j=i+1;j<input_q_size;j++){
-                input_q_pro_id[j-1]=input_q_pro_id[j];
-                input_q_pro_size[j-1]=input_q_pro_size[j];
-            }
-            found=1;
-            input_q_size-=1;
-            break;
-        }
-    }
+    for(i=0;i<input_q_size;i++){ if(input_q_pro_id[i] == id_pro && found == 0) { var j; for(j=i+1;j<input_q_size;j++){ input_q_pro_id[j-1]=input_q_pro_id[j]; input_q_pro_size[j-1]=input_q_pro_size[j]; } found=1; input_q_size-=1; break; } }
     if(found == 1) {
         drawPart();
         var i;
@@ -303,7 +291,7 @@ function removeFromQ(pro_id) {
 
 function drawInputQTable() {
     var htmlText =
-    `
+        `
     <button type="submit" class="btn btn-primary md-3" id="compact-btn">Compact</button>
     <table>
     <tr>
@@ -315,26 +303,26 @@ function drawInputQTable() {
     for(var i = 0; i < input_q_size; i++)
     {
         htmlText +=
-        `
+            `
         <td>` + input_q_pro_id[i] + `</td>
         `;
     }
 
     htmlText +=
-    `
+        `
     <tr>
         <th>Process Size</th>
     `;
     for(var i = 0; i < input_q_size; i++)
     {
         htmlText +=
-        `
+            `
         <td>` + input_q_pro_size[i] + `</td>
         `;
     }
 
     htmlText +=
-    `
+        `
     </tr>
     </table>
     `;
@@ -378,9 +366,9 @@ function calcExtFrag(pro_size) {
         }
     }
     tot_hole_size += total_mem_size - part_end[num_parts-1];
-    if(tot_hole_size >= pro_size) {
+    if(tot_hole_size > pro_size) {
         alert("External Fragmentation is " + tot_hole_size);
-         alert("you can compact and add this process");
+        alert("you can compact and add this process");
     }
 }
 

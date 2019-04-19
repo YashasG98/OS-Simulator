@@ -377,7 +377,7 @@ function calcExtFrag(pro_size) {
         }
     }
     tot_hole_size += total_mem_size - part_end[num_parts-1];
-    if(tot_hole_size >= pro_size) {
+    if(tot_hole_size > pro_size) {
         alert("External Fragmentation is " + tot_hole_size);
         alert("you can compact and add this process");
     }
