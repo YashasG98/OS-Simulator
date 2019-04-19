@@ -1,48 +1,4 @@
 <html>
-<!-- 
-
-IO FORMAT
-best fit
-
-For example if the input values are this:
-
-    memSize = 1000
-    inputsize=200,400,300
-    contiguous memory allocation;
-
-    pid     memory alloted
-    1       0-200
-    2       200-600
-    3       600-900
-
-    remove pid2;
-
-    input 50;
-
-    allocated memory 
-    pid     memory alloted
-    1       0-200
-    4       200-250
-    null    250-600
-    3       600-900
-    null    900-1000
-
-    inputsize 400;
-
-    you can compact and remove the external fragmentation
-
-    allocated memory 
-    pid     memory alloted
-    1       0-200
-    4       200-250
-    3       250-550
-    5       550-950
-    null    950-1000
-    
-process can be added and removed dynamically
-
-     -->
-
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -129,7 +85,52 @@ process can be added and removed dynamically
     </div>
 </div>
 
+<!--<div class="start-menu" id="start_menu">
+    <nav class="navbar navbar-default fixed-bottom" role="navigation">
+        <div class="side-menu-container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="nav-item nav-link active" href="#socket"><span class="glyphicon glyphicon-comment"></span>System Calls</a>
+                </li>
+                <li>
+                    <a href="../ProcessScheduling/index.html" class="nav-item nav-link"><span class="glyphicon glyphicon-tasks"></span>Process Scheduling</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../ProcessSynchronization/index.html"><span class="glyphicon glyphicon-refresh"></span>Process Synchronization</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../Bankers/index.html"><span class="glyphicon glyphicon-equalizer"></span>Bankers Algorithm</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../PageReplacement/index.html"><span class="glyphicon glyphicon-duplicate"></span>Page Replacement</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../MVT/index.html"><span class="glyphicon glyphicon-hdd"></span>Memory Management (MVT)</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../MFT/index.html"><span class="glyphicon glyphicon-hdd"></span>Memory Management (MFT)</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../DiskScheduling/index.html"><span class="glyphicon glyphicon-cd"></span>Disk Scheduling</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="../FileAllocation/index.html"><span class="glyphicon glyphicon-file"></span>File Allocation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
+<div class="start-bottom">
+    <button class="start" data-toogle="tooltip" title="Search your Computer" onclick="startmenu()">
+        <img src="../images/thumb_Start.png" width="40px" height="40px" alt="start" />
+    </button>
+    <div class="date-time">
+        <span class="time"></span>
+        <span class="am-pm"></span><br>
+        <span class="date"></span>
+    </div>
+</div>-->
 
 <script src="./wf.js"></script>
 
