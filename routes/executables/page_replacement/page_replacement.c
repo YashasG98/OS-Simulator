@@ -66,7 +66,7 @@ int optimal_predict(int reference_length, int references[], int page_no ,int fra
 				break;
 			}
 		}
-		if(j==page_no)
+		if(j==reference_length)
 			return i;
 	}
 	if(pos == -1)
